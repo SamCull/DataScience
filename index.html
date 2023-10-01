@@ -14,15 +14,16 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <!-- link to about page -->
-          <li><a href="#experience">experience</a></li>
+          <li><a href="#experience">Experience</a></li>
           <!-- link to about page -->
-          <li><a href="#projects">projects</a></li>
+          <li><a href="#projects">Projects</a></li>
           <!-- link to about page -->
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#contact">Contact</a></li>
           <!-- link to about page -->
         </ul>
       </div>
     </nav>
+    <!-- Nav links for hamburger -->
     <nav id="hamburger-nav">
       <div class="logo">Sam Cullen</div>
       <div class="hamburger-menu">
@@ -32,25 +33,29 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <!-- link to about page -->
+          <li>
+            <!-- link to about page -->
+            <a href="#about" onclick="toggleMenu()">About</a></li>
+          <!-- link to experience page-->
           <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
-          <!-- link to about page -->
+          <!-- link to projects page -->
           <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
-          <!-- link to about page -->
+          <!-- link to contact page-->
           <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
-          <!-- link to about page -->
         </div>
       </div>
     </nav>
+    <!-- Personal photo & Text -->
     <section id="profile">
       <div class="section_pic">
-        <img src="./assets/profile-pic1.png" alt="Sam Cullen picture" />
+        <img src="./assets/profile-pic.png" alt="Sam Cullen picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Sam Cullen</h1>
         <p class="section__text__p2">Software Dev student at SETU Carlow</p>
+
+        <!-- LinkedIn & GitHub buttons-->
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -61,11 +66,11 @@
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact info
           </button>
-        </div>
+        </div> 
         <div id="socials=container">
           <img
             src="./assets/github.png"
-            alt="My Github Profile"
+            alt="My Github Profile" 
             class="icon"
             onclick="location.href='https://github.com/SamCull'"
           />
