@@ -6,17 +6,21 @@
   padding: 0;
 }
 
-body { /* Font of page */
+body {
+  /* Font of page */
   font-family: "Poppins", sans-serif;
 }
 
-html { 
+html {
   scroll-behavior: smooth;
 }
 p {
   color: rgb(85, 85, 85);
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* Transitions */
 a,
 .btn {
@@ -32,13 +36,15 @@ nav {
   align-items: center;
   height: 17vh; /*match screen height*/
 }
-.nav-links { /* Gap between menu options */
+.nav-links {
+  /* Gap between menu options */
   gap: 12rem;
   list-style: none;
   font-size: 1.5rem;
 }
 
-a { /* Nav color */
+a {
+  /* Nav color */
   color: black;
   text-decoration: none;
   text-decoration-color: white;
@@ -83,7 +89,8 @@ hamburger depending on screen size */
   background-color: black;
   transition: all 0.3 ease-in-out;
 }
-.menu-links { /* Backround of words in hamburger */
+.menu-links {
+  /* Backround of words in hamburger */
   position: absolute;
   top: 100%;
   right: 0;
@@ -93,7 +100,8 @@ hamburger depending on screen size */
   overflow: hidden;
   transition: all 0.3 ease-in-out;
 }
-.menu-links a { /* Words in hamburger */
+.menu-links a {
+  /* Words in hamburger */
   display: block;
   padding: 10px;
   text-align: center;
@@ -140,8 +148,9 @@ section {
   display: flex;
 }
 
-/* Profile */ 
-#profile { /*Main text positioning */
+/* Profile */
+#profile {
+  /*Main text positioning */
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -153,23 +162,28 @@ section {
   width: 600px;
   margin: auto 0;
 }
-.section__text { /* Gap betw buttons and icons*/
+.section__text {
+  /* Gap betw buttons and icons*/
   align-self: center;
   text-align: center;
 }
-.section__text p { /* Software Dev text */
-  font-weight: 600
+.section__text p {
+  /* Software Dev text */
+  font-weight: 600;
 }
-.section__text__p1 { /* Hello I'm text */
+.section__text__p1 {
+  /* Hello I'm text */
   text-align: center;
   font-size: 2rem;
 }
 
-.section__text__p2 { /* Soft dev text */
+.section__text__p2 {
+  /* Soft dev text */
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
-.title { /* Sam Cullen text*/
+.title {
+  /* Sam Cullen text*/
   font-size: 3rem;
   text-align: center;
 }
@@ -266,4 +280,39 @@ section {
 }
 .btn-container {
   gap: 1rem;
+}
+/* Page 2 */
+/* About section */
+#about {
+  position: relative;
+}
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+.about-pic {
+  border-radius: 2rem;
+}
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
 }

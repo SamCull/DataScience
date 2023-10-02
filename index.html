@@ -35,13 +35,14 @@
         <div class="menu-links">
           <li>
             <!-- link to about page -->
-            <a href="#about" onclick="toggleMenu()">About</a></li>
+            <a href="#about" onclick="toggleMenu()">About</a>
+          </li>
           <!-- link to experience page-->
-          <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
+          <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
           <!-- link to projects page -->
-          <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <!-- link to contact page-->
-          <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
@@ -66,11 +67,11 @@
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact info
           </button>
-        </div> 
+        </div>
         <div id="socials=container">
           <img
             src="./assets/github.png"
-            alt="My Github Profile" 
+            alt="My Github Profile"
             class="icon"
             onclick="location.href='https://github.com/SamCull'"
           />
@@ -82,6 +83,63 @@
           />
         </div>
       </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get to know more</p>
+      <h1 class="title">About me</h1>
+      <div class="section-container">
+        <div class="section_pic-container">
+          <img
+            src="./assets/about-pic1.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about_details_container">
+          <div class="about-containers">
+            <div class="details-containers">
+              <img
+                src="./assets/experience.png"
+                alt="experience-icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                2+ Years <br />
+                Frontend Development
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education-icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                B.Sc. Bachelors Degree <br />
+                M.Sc. Masters Degree
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
+              id autem aliquam ex minus cupiditate pariatur voluptate illum
+              eaque! Explicabo sequi dignissimos iusto assumenda a veniam minus
+              iste, quia magnam quaerat repellat maiores eos fuga iure. Fugit,
+              officiis laudantium voluptas earum quam repellat, sapiente magnam
+              accusantium illo, ex quidem?
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./experience'"
+      />
     </section>
     <script src="script.js"></script>
   </body>
