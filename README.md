@@ -15,3 +15,8 @@ This was a website build to showcase the following:
 * Github
 * Visual Studio Code
 * Netlify for deploying the website
+## Extensions
+*LiveServer
+For hosting the website locally to give  a view of how the portfolio looks in a website format
+*Prettier
+Keep code clean and formatted before pushing to GitHub
