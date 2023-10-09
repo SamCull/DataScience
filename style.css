@@ -14,28 +14,35 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 p {
   color: rgb(85, 85, 85);
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 /* Transitions */
 a,
 .btn {
   transition: all 300ms ease;
 }
+
 /* Desktop nav */
 nav,
 .nav-links {
   display: flex;
 }
+
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh; /*match screen height*/
+  height: 17vh;
+  /*match screen height*/
 }
+
 .nav-links {
   /* Gap between menu options */
   gap: 2rem;
@@ -49,6 +56,7 @@ a {
   text-decoration: none;
   text-decoration-color: white;
 }
+
 a:hover {
   /*line under topics*/
   color: grey;
@@ -56,9 +64,11 @@ a:hover {
   text-underline-offset: 1rem;
   text-decoration-color: 181, 181, 181;
 }
+
 .logo {
   font-size: 2rem;
 }
+
 .logo:hover {
   cursor: default;
 }
@@ -69,10 +79,12 @@ hamburger depending on screen size */
 #hamburger-nav {
   display: none;
 }
+
 .hamburger-menu {
   position: relative;
   display: inline-block;
 }
+
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -81,14 +93,15 @@ hamburger depending on screen size */
   width: 30px;
   cursor: pointer;
 }
- 
+
 .hamburger-icon span {
   /*hamburger icon details*/
   width: 100%;
   height: 2px;
   background-color: black;
-  transition:  0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }
+
 .menu-links {
   /* Backround of words in hamburger */
   position: absolute;
@@ -100,6 +113,7 @@ hamburger depending on screen size */
   overflow: hidden;
   transition: all 0.3 ease-in-out;
 }
+
 .menu-links a {
   /* Words in hamburger */
   display: block;
@@ -110,28 +124,36 @@ hamburger depending on screen size */
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
+
 .menu-links li {
   list-style: none;
 }
+
 /* linked to JS */
 .menu-links.open {
   max-height: 300px;
 }
+
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
+
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
+
 .hamburger-icon span:first-child {
   transform: none;
 }
+
 .hamburger-icon span:first-child {
   opacity: 1;
 }
+
 .hamburger-icon span:first-child {
   transform: none;
 }
@@ -144,6 +166,7 @@ section {
   box-sizing: border-box;
   min-height: fit-content;
 }
+
 .section-container {
   display: flex;
 }
@@ -156,21 +179,25 @@ section {
   gap: 5rem;
   height: 80vh;
 }
+
 .section__pic-container {
   display: flex;
   height: 600px;
   width: 600px;
   margin: auto 0;
 }
+
 .section__text {
   /* Gap betw buttons and icons*/
   align-self: center;
   text-align: center;
 }
+
 .section__text p {
   /* Software Dev text */
   font-weight: 600;
 }
+
 .section__text__p1 {
   /* Hello I'm text */
   text-align: center;
@@ -182,11 +209,13 @@ section {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
+
 .title {
   /* Sam Cullen text*/
   font-size: 3rem;
   text-align: center;
 }
+
 #socials-container {
   display: flex;
   justify-content: center;
@@ -206,6 +235,7 @@ section {
   justify-content: center;
   gap: 1rem;
 }
+
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
@@ -213,6 +243,7 @@ section {
   width: 8rem;
   border-radius: 2rem;
 }
+
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -228,15 +259,19 @@ section {
   background: rgb(53, 53, 53);
   color: white;
 }
+
 .btn-color-1:hover {
   background: rgb(0, 0, 0);
 }
+
 .btn-color-2 {
   background: none;
 }
+
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
+
 .btn-container {
   gap: 1rem;
 }
@@ -247,18 +282,24 @@ section {
   justify-content: center;
   gap: 1rem;
 }
+
 .btn {
+  /* Download CV text */
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
   height: 4rem;
   border-radius: 2rem;
+  color: black;
 }
+
 .btn-color-1,
 .btn-color-2 {
+  /* Download & Contact buttons */
   border: rgb(53, 53, 53) 0.1rem solid;
 }
+
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
@@ -266,21 +307,27 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
+  /* Contact info*/
   background: rgb(53, 53, 53);
   color: white;
 }
+
 .btn-color-1:hover {
   background: rgb(0, 0, 0);
 }
+
 .btn-color-2 {
   background: none;
 }
+
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
+
 .btn-container {
   gap: 1rem;
 }
+
 /* Page 2 */
 /* ABOUT SECTION */
 
@@ -306,8 +353,10 @@ section {
 
 .about-pic {
   border-radius: 2rem;
-  height: 40vh; /* edit in/out */
-  width: 200vh; /* edit in/out */
+  height: 40vh;
+  /* edit in/out */
+  width: 200vh;
+  /* edit in/out */
 }
 
 .arrow {
@@ -318,6 +367,7 @@ section {
 
 
 .details-containers {
+  /* Experience tab in About page*/
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -328,6 +378,7 @@ section {
 }
 
 .section-container {
+  /*About pic and text */
   gap: 4rem;
   height: 80%;
 }
@@ -339,21 +390,27 @@ section {
 }
 
 /* Experience section */
-#experience{
+#experience {
   position: relative;
 }
-.experience-sub-title{
+
+.experience-sub-title {
+  /* Front/Backend Text */
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
-.experience-details-container{
+
+.experience-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.article-container{ /* Skills wrap under eachother to fit more */
+
+.article-container {
+  /* Content inside box */
+  /* Skills wrap under eachother to fit more */
   display: flex;
   text-align: initial;
   flex-wrap: wrap;
@@ -361,12 +418,15 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
-article{
+
+article {
+  /*Distance between icon and skills */
   display: flex;
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
 }
-article .icon{
+
+article .icon {
   cursor: default;
 }
