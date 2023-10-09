@@ -16,7 +16,5 @@ This was a website build to showcase the following:
 * Visual Studio Code
 * Netlify for deploying the website
 ## Extensions
-* LiveServer
-  For hosting the website locally to give  a view of how the portfolio looks in a website format
-* Prettier
-  Keep code clean and formatted before pushing to GitHub
+* LiveServer: for hosting the website locally to give  a view of how the portfolio looks in a website format
+* Prettier: keep code clean and formatted before pushing to GitHub
