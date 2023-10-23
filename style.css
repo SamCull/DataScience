@@ -486,3 +486,11 @@ color: black;
 .email-icon{
   height: 2.5rem;
 }
+/* Footer section */
+footer{
+  height: 26vg;
+  margin: 0 1rem;
+}
+footer p{
+  text-align: center;
+}
