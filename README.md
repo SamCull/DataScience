@@ -1,4 +1,4 @@
-# Portfolio Website
+# Sam Cullen Portfolio Website
 Portfolio website built in HTML, CSS and JS
 
 This was a website build to showcase the following:
@@ -6,6 +6,7 @@ This was a website build to showcase the following:
 * My technical skill set
 * Information about me and my education
 * My projects
+* My Contact info
 
 ### Technologies used
 * HTML
