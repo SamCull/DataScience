@@ -21,3 +21,6 @@ This was a website build to showcase the following:
 ## Extensions
 * LiveServer: for hosting the website locally to give  a view of how the portfolio looks in a website format
 * Prettier: keep code clean and formatted before pushing to GitHub
+## Imports for creating graphs & charts
+* matplotlib.pyplot as plt
+* pandas as pd
