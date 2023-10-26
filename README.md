@@ -12,9 +12,11 @@ This was a website build to showcase the following:
 * HTML
 * CSS
 * JS
+* Python
 * Git
 * Github
 * Visual Studio Code
+* PyCharm Community Edition
 * Netlify for deploying the website
 ## Extensions
 * LiveServer: for hosting the website locally to give  a view of how the portfolio looks in a website format
