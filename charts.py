@@ -1,7 +1,10 @@
+# Sam Cullen
+# C00250093
+
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Load the data from the CSV file
+# Load data from the CSV file
 data = pd.read_csv('carAccidentsData.csv')
 
 # Graph to display Accidents per year
