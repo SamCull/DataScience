@@ -20,7 +20,18 @@ This was a website build to showcase the following:
 * Netlify for deploying the website
 ## Extensions
 * LiveServer: for hosting the website locally to give  a view of how the portfolio looks in a website format
-* Prettier: keep code clean and formatted before pushing to GitHub
+* Prettier: keep code clean and formatted for VS Code before pushing to GitHub
+* Black: keep code clean for PyCharm code
 ## Imports for creating graphs & charts
-* matplotlib.pyplot as plt
-* pandas as pd
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# from tensorflow import tf
+# from fbprohet import Prophet
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from statsmodels.tsa.arima.model import ARIMA
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import OneHotEncoder
