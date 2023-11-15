@@ -26,7 +26,6 @@ This was a website build to showcase the following:
 * import matplotlib.pyplot as plt
 * import pandas as pd
 * import numpy as np
-* 
 * from tensorflow import tf
 * from fbprohet import Prophet
 * from sklearn.model_selection import train_test_split
