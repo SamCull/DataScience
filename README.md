@@ -9,7 +9,7 @@ This was a website build to showcase the following:
 * Information about me and my education
 * My projects
 * My Contact info
-
+* Viewable from other devices, tablet, phone etc
 ### Technologies used
 * HTML
 * CSS
