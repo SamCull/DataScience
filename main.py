@@ -163,27 +163,26 @@ ARIMA Time Series Forecasting
 This code uses an ARIMA model to forecast yearly accident counts. It splits data into
 training and testing sets, fits the model, evaluates performance with MSE, and plots results
 """
-# Split the data into training and testing sets
-train_size = int(len(accidents_per_year) * 0.8)
-train, test = accidents_per_year[0:train_size], accidents_per_year[train_size:]
-# Fit ARIMA model
-model = ARIMA(train, order=(1, 1, 1))
-model_fit = model.fit()
-# Make predictions
-predictions = model_fit.forecast(steps=len(test))
-# Evaluate model
-mse = mean_squared_error(test, predictions)
-print("Mean Squared Error for Number of Accidents:", mse)
+# Split the data into features and target variable
+X = data.drop("Killed or seriously injured", axis=1)
+y = data["Killed or seriously injured"]
 
-# Plot the predictions
-plt.plot(train.index, train, label="Training Data")
-plt.plot(test.index, test, label="Test Data")
-plt.plot(test.index, predictions, label="Predictions", linestyle="dashed")
-plt.xlabel("Year")
-plt.ylabel("Number of Accidents")
-plt.title("Accident predictor per Year")
-plt.legend()
-plt.show()
+# Handle categorical variables with one-hot encoding
+X = pd.get_dummies(X, columns=["Casualty sex", "Weather condition", "Accident month"])
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Choose a different model (e.g., Random Forest)
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+
+# Evaluate model
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error for Killed/Seriously injured:", mse)
 
 
 """
@@ -235,6 +234,39 @@ plt.title("Linear Regression Prediction of Car Accidents")
 plt.legend()
 plt.show()
 
+"""
+Linear Regression with Categorical Variables
+
+This code shows the use of one-hot encoding for categorical variables,
+handling missing values through imputation, and training a linear regression model
+The model is evaluated using mean squared error on a test set
+"""
+# Handle categorical variables withh one-hot encoding
+data["Casualty age"] = pd.to_numeric(data["Casualty age"], errors="coerce")
+data["Casualty age"].fillna(data["Casualty age"].median(), inplace=True)
+
+# Feature Engineering: Explore additional features or transformations
+
+# Split the data into features and target variable
+X = data.drop("Killed or seriously injured", axis=1)
+y = data["Killed or seriously injured"]
+
+# Handle categorical variables with one-hot encoding
+#X = pd.get_dummies(X, columns=["Casualty sex", "Weather condition", "Accident month"])
+X = pd.get_dummies(X, columns=["Casualty sex", "Weather condition", "Accident month"])
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Choose a different model (e.g., Random Forest)
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+
+# Evaluate model
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error for Killed/Seriously injured:", mse)
 
 """
 Calculate Averages
@@ -247,38 +279,3 @@ average_killed_or_injured = data["Killed or seriously injured"].mean()
 print(f"Average Killed or Seriously Injured: {average_killed_or_injured}")
 average_casualty_age = data["Casualty age"].mean()
 print(f"Average Casualty Age: {average_casualty_age}")
-
-"""
-Linear Regression with Categorical Variables
-
-This code shows the use of one-hot encoding for categorical variables,
-handling missing values through imputation, and training a linear regression model
-The model is evaluated using mean squared error on a test set
-"""
-# Handle categorical variables withh one-hot encoding
-data = pd.get_dummies(
-    data, columns=["Casualty sex", "Weather condition", "Accident month"]
-)
-
-# Handle missing values by replacing "Unknown or missing" with NaN and using median imputation
-data["Casualty age"] = pd.to_numeric(data["Casualty age"], errors="coerce")
-data["Casualty age"].fillna(data["Casualty age"].median(), inplace=True)
-
-# Split the data into features and target variable
-X = data.drop("Killed or seriously injured", axis=1)
-y = data["Killed or seriously injured"]
-
-# Split the data into training and testing sets                     20%
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-model = LinearRegression()
-# Train the model
-model.fit(X_train, y_train)
-# Make predictions
-y_pred = model.predict(X_test)
-# Evaluate model
-
-
-mse = mean_squared_error(y_test, y_pred)
-print("Mean Squared Error for Killed/Seriously injured:", mse)
