@@ -19,6 +19,7 @@ This was a website build to showcase the following:
 * Github
 * Visual Studio Code
 * PyCharm Community Edition
+* Jupyter Notebook
 * Netlify for deploying the website
 ## Extensions
 * LiveServer: for hosting the website locally to give  a view of how the portfolio looks in a website format
