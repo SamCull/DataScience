@@ -12,6 +12,7 @@ from sklearn.metrics import mean_squared_error
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.datasets import make_blobs
 
 # Load data from the CSV file
 data = pd.read_csv("carAccidentsData.csv")
@@ -42,7 +43,9 @@ plt.xlabel("Year")
 plt.ylabel("Number of Accidents")
 plt.title("Number of Accidents per Year")
 plt.show()
+#
 
+#
 """
 Monthly Accidents Line Graph
 This code creates a line graph to illustrate the number of accidents per month
@@ -158,10 +161,99 @@ plt.xlabel("Percentage (%)")
 plt.title("Distribution of Weather Conditions in Accidents")
 plt.show()
 
+""" 
+Displaying scatter graphs for years 2020 - 2022 displaying a 
+Scatter Plot for Casualty Age vs. Killed or Seriously Injured 
+"""
+
+# 2022
+# Filter data for the year 2022
+data_2022 = data[data.index.year == 2022]
+# Scatter plot using "Casualty age" and "Killed or seriously injured" columns for the year 2022
+plt.scatter(data_2022["Casualty age"], data_2022["Killed or seriously injured"], s=35, alpha=0.5)
+plt.title("Scatter Plot: Casualty Age vs. Killed or Seriously Injured (Year 2022)")
+plt.xlabel("Casualty Age")
+plt.ylabel("Killed or Seriously Injured")
+plt.show()
+##
+
+# 2021
+# Filter data for the year 2021
+data_2021 = data[data.index.year == 2021]
+# Scatter plot using "Casualty age" and "Killed or seriously injured" columns for the year 2021
+plt.scatter(data_2021["Casualty age"], data_2021["Killed or seriously injured"], s=35, alpha=0.5)
+plt.title("Scatter Plot: Casualty Age vs. Killed or Seriously Injured (Year 2021)")
+plt.xlabel("Casualty Age")
+plt.ylabel("Killed or Seriously Injured")
+plt.show()
+
+# 2020
+# Filter data for the year 2020
+data_2020 = data[data.index.year == 2020]
+# Scatter plot using "Casualty age" and "Killed or seriously injured" columns for the year 2020
+plt.scatter(data_2020["Casualty age"], data_2020["Killed or seriously injured"], s=35, alpha=0.5)
+plt.title("Scatter Plot: Casualty Age vs. Killed or Seriously Injured (Year 2020)")
+plt.xlabel("Casualty Age")
+plt.ylabel("Killed or Seriously Injured")
+plt.show()
+
+# 2019
+# Filter data for the year 2019
+data_2019 = data[data.index.year == 2019]
+# Scatter plot using "Casualty age" and "Killed or seriously injured" columns for the year 2019
+plt.scatter(data_2019["Casualty age"], data_2019["Killed or seriously injured"], s=35, alpha=0.5)
+plt.title("Scatter Plot: Casualty Age vs. Killed or Seriously Injured (Year 2019)")
+plt.xlabel("Casualty Age")
+plt.ylabel("Killed or Seriously Injured")
+plt.show()
+
+
+"""
+Making a 2x2 grid of scatter plots for the above
+each comparing "Casualty Age" to "Killed or Seriously Injured" for different years (2019, 2020, 2021, and 2022).
+"""
+# Create a figure with subplots
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+# Flatten the axes array
+axes = axes.flatten()
+
+# Plot scatter plot for 2022
+data_2022 = data[data.index.year == 2022]
+axes[0].scatter(data_2022["Casualty age"], data_2022["Killed or seriously injured"], s=35, alpha=0.5)
+axes[0].set_title("Casualty Age vs. Killed or Seriously Injured (Year 2022)")
+axes[0].set_xlabel("Casualty Age")
+axes[0].set_ylabel("Killed or Seriously Injured")
+
+# Plot scatter plot for 2021
+data_2021 = data[data.index.year == 2021]
+axes[1].scatter(data_2021["Casualty age"], data_2021["Killed or seriously injured"], s=35, alpha=0.5)
+axes[1].set_title("Casualty Age vs. Killed or Seriously Injured (Year 2021)")
+axes[1].set_xlabel("Casualty Age")
+axes[1].set_ylabel("Killed or Seriously Injured")
+
+# Plot scatter plot for 2020
+data_2020 = data[data.index.year == 2020]
+axes[2].scatter(data_2020["Casualty age"], data_2020["Killed or seriously injured"], s=35, alpha=0.5)
+axes[2].set_title("Casualty Age vs. Killed or Seriously Injured (Year 2020)")
+axes[2].set_xlabel("Casualty Age")
+axes[2].set_ylabel("Killed or Seriously Injured")
+
+# Plot scatter plot for 2019
+data_2019 = data[data.index.year == 2019]
+axes[3].scatter(data_2019["Casualty age"], data_2019["Killed or seriously injured"], s=35, alpha=0.5)
+axes[3].set_title("Casualty Age vs. Killed or Seriously Injured (Year 2019)")
+axes[3].set_xlabel("Casualty Age")
+axes[3].set_ylabel("Killed or Seriously Injured")
+
+# Adjust layout and show the plots
+plt.tight_layout()
+plt.show()
+
 """
 ARIMA Time Series Forecasting
-This code uses an ARIMA model to forecast yearly accident counts. It splits data into
-training and testing sets, fits the model, evaluates performance with MSE, and plots results
+Using an ARIMA model to forecast yearly accident counts. Split data into
+training and testing sets, fit the model, shows performance with MSE, and shows results
 """
 # Split the data into features and target variable
 X = data.drop("Killed or seriously injured", axis=1)
@@ -246,13 +338,11 @@ data["Casualty age"] = pd.to_numeric(data["Casualty age"], errors="coerce")
 data["Casualty age"].fillna(data["Casualty age"].median(), inplace=True)
 
 # Feature Engineering: Explore additional features or transformations
-
 # Split the data into features and target variable
 X = data.drop("Killed or seriously injured", axis=1)
 y = data["Killed or seriously injured"]
 
 # Handle categorical variables with one-hot encoding
-#X = pd.get_dummies(X, columns=["Casualty sex", "Weather condition", "Accident month"])
 X = pd.get_dummies(X, columns=["Casualty sex", "Weather condition", "Accident month"])
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
