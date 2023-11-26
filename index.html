@@ -8,7 +8,39 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaQ.css" />
 </head>
-
+<!--
+<title>Toggle - Dark Theme</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<style>
+/* Toggle Dark Theme */
+#theme-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #596AFF;
+}
+#theme-btn:hover {
+  color: #BB86FC;
+}
+.changeTheme {
+  background: #1D1E22;
+  color: #eee;
+}
+</style>
+<body>
+  <div id="theme-btn" class="far fa-moon"></div>
+<script>
+const themeBtn = document.getElementById("theme-btn");
+themeBtn.onclick = () => {
+  themeBtn.classList.toggle("fa-sun");
+  if (themeBtn.classList.contains("fa-sun")) {
+    document.body.classList.add("changeTheme");
+  } else {
+    document.body.classList.remove("changeTheme");
+  }
+}
+</script>
+-->
 <body>
   <nav id="desktop-nav">
     <div class="logo">Sam Cullen</div>
@@ -243,10 +275,10 @@
           </div>
           <h2 class="experience-sub-title project-title">Multi Quiz Trivia App</h2>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SamCull/CognitiveApp'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/SamCull/CognitiveApp', '_blank')">
               GitHub link
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SamCull/CognitiveApp'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/SamCull/CognitiveApp', '_blank')">
               Live demo
             </button>
           </div>
@@ -257,10 +289,10 @@
           </div>
           <h2 class="experience-sub-title project-title">Word game</h2>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SamCull/PythonWork'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/SamCull/PythonWork', '_blank')">
               GitHub link
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SamCull/PythonWork'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/SamCull/PythonWork', '_blank')">
               Live demo
             </button>
           </div>
@@ -269,13 +301,13 @@
           <div class="article-container">
             <img src="./assets/project-3.png" alt="Project 3" class="project-img">
           </div>
-          <h2 class="experience-sub-title project-title">Customer Invoice Management</h2>
+          <h2 class="experience-sub-title project-title">ML Car Accident Prediction</h2>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SamCull/Java/tree/master/test/src/GUIBUILDER'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/SamCull/DataScience', '_blank')">
               GitHub link
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SamCull/Java/tree/master/test/src/GUIBUILDER'">
-              Live demo
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/SamCull/DataScience/blob/main/carAccidentData.ipynb', '_blank')">
+            Jupyter Notebook
             </button>
           </div>
         </div>
