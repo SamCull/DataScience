@@ -26,11 +26,8 @@ This was a website build to showcase the following:
 * Prettier: keep code clean and formatted for VS Code before pushing to GitHub
 * Black: keep code clean for PyCharm code
 ## Imports for creating graphs & charts
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# from tensorflow import tf
-# from fbprohet import Prophet
+* import matplotlib.pyplot as plt
+* import pandas as pd
 * import numpy as np
 * from sklearn.model_selection import train_test_split
 * from sklearn.linear_model import LinearRegression
