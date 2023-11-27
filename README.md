@@ -1,7 +1,7 @@
 # Sam Cullen | Portfolio Website | Machine Learning
 Portfolio website built in HTML, CSS and JS
 
-Link to website - https://kaleidoscopic-tartufo-a7f6fe.netlify.app/
+Link to website - https://gilded-ganache-6caf74.netlify.app/
 
 This was a website build to showcase the following:
 * My web design skills
