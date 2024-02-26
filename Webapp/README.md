@@ -29,3 +29,12 @@ The data set contains 3 classes of 50 instances each, where each class refers to
 <li>Logistic Regression
 <li>K-Nearest Neighbors
 <li>Decision Tree
+
+# Project Structure
+  ├── deploy.py                     
+  ├── Iris Webapp.ipynb             
+  ├── Iris.csv                     
+  ├── model.joblib                     
+  ├── savedmodel.sav                      
+  ├── templates                       
+  │    ├── index.html                 
