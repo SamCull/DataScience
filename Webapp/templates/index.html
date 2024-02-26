@@ -1,13 +1,61 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        form h2 {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box; /* Added to include padding in input's total width */
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+    </style>
+</head>
 <body>
-    <form action = '/predict' method = "POST">
-        Sepal Length: <input type="text" name ="sepal_length"><br>
-        Sepal Width: <input type="text" name ="sepal_width"><br>
-        Petal Length: <input type="text" name ="petal_length"><br>
-        Petal Width: <input type="text" name ="petal_width"><br>
-        Class: {{result}} <br>
+    <form action="/predict" method="POST">
+        <h2>Iris Flower Classification</h2>
+        Sepal Length: <input type="text" name="sepal_length"><br>
+        Sepal Width: <input type="text" name="sepal_width"><br>
+        Petal Length: <input type="text" name="petal_length"><br>
+        Petal Width: <input type="text" name="petal_width"><br>
+        Class: <span class="result">{{result}}</span> <br>
         <input type="submit" value="Predict">
     </form>
 </body>
-
 </html>
