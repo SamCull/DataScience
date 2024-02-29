@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Webapp Demo</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .video-container {
+            padding: 0.5rem; /* Padding around the video */
+            background: #fff; /* Background color for the padding area */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 3px solid #333; /* Border around the video box */
+        }
+        video {
+            width: 100%; /* Responsive video width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Slightly rounded corners for the video itself */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Iris Webapp Demo</h1>
+    <div class="video-container">
+        <!-- HTML5 Video Player -->
+        <video controls>
+            <source src="./assets/iris.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<footer>
+    © 2024 by Sam Cullen. All rights reserved.
+</footer>
+
+</body>
+</html>
