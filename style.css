@@ -22,6 +22,7 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  border-radius: 50%;  
 }
 
 /* Transitions */
@@ -177,7 +178,8 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: auto; /* Adjusted from a fixed height to auto */
+  min-height: 80vh; /* Ensure a minimum height, but allow it to grow */
 }
 
 .section__pic-container {
@@ -352,11 +354,13 @@ section {
 }
 
 .about-pic {
-  border-radius: 2rem;
-  height: 40vh;
+  margin-top: 3rem;
+  border-radius: 50%;
+  height: 45vh;
   /* edit in/out */
-  width: 200vh;
+  width: 220vh;
   /* edit in/out */
+  
 }
 
 .arrow {
@@ -432,9 +436,50 @@ article .icon {
 }
 
 /* Projects section */
-#projects{
+#projects {
   position: relative;
 }
+
+.projects-sub-title {
+  /* Front/Backend Text */
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+#projects .about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This will spread the project cards evenly */
+  gap: 20px; /* Adjust the gap to your preference */
+}
+
+/* Set the project cards to take up one-third of the container's width */
+#projects .details-container {
+  flex: 0 0 calc(33.333% - 20px); /* Subtract the gap from the width */
+  margin-bottom: 20px; /* This adds space between the rows */
+}
+section {
+  padding-top: 4vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content; /* This allows the section to grow with the content */
+  height: auto; /* New line added */
+}
+
+/* For smaller screens, adjust the number of items per row */
+@media (max-width: 1024px) {
+  #projects .details-container {
+    flex: 0 0 calc(50% - 20px); /* For two items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .details-container {
+    flex: 0 0 100%; /* For one item per row */
+  }
+}
+
 .color-container{
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
@@ -457,8 +502,9 @@ color: black;
 #contact {
   display: flex;
   justify-content: center;
-  flex-direction:  column;
-  height: 70vh;
+  flex-direction: column;
+  height: auto; /* Adjusted from a fixed height to auto */
+  min-height: 70vh; /* Ensure a minimum height, but allow it to grow */
 }
 .contact-info-upper-container{
   display: flex;
@@ -493,4 +539,102 @@ footer{
 }
 footer p{
   text-align: center;
+}
+.portfolio .portfolio-flters {
+  padding: 0 0 20px 0;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio .portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 10px;
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-flters li:hover,
+.portfolio .portfolio-flters li.filter-active {
+  color: var(--color-primary);
+}
+
+.portfolio .portfolio-flters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio .portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .portfolio .portfolio-flters li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+.portfolio .portfolio-wrap {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  padding: 25px 20px;
+  background-color: #fff;
+  position: relative;
+  border-top: 1px solid #f3f3f3;
+  z-index: 2;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 50px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 a {
+  color: var(--color-default);
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 a:hover {
+  color: var(--color-primary);
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-right: 50px;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details Section
+--------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
 }
