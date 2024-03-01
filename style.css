@@ -9,6 +9,7 @@
 body {
   /* Font of page */
   font-family: "Poppins", sans-serif;
+  background-color: #EDEADE;
 }
 
 html {
@@ -637,4 +638,7 @@ footer p{
   height: 12px;
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 1;
+}
+.project-type {
+  text-align: center;
 }
