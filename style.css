@@ -30,6 +30,7 @@ img {
 a,
 .btn {
   transition: all 300ms ease;
+  margin-bottom: 20px;
 }
 
 /* Desktop nav */
@@ -405,6 +406,7 @@ section {
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .experience-details-container {
@@ -489,6 +491,7 @@ section {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  margin-top: 20px;
 }
 .project-title{
 margin: 1rem;
