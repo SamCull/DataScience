@@ -3,19 +3,20 @@ Portfolio website built in HTML, CSS and JS
 
 Link to my website -https://samcullen.netlify.app/
 
-This was a website build to showcase the following:
+This was a repository created to showcase the following:
 * My web design skills
 * My technical skill set
 * Information about me and my education
 * My projects
 * My Contact info
 * Viewable from other devices, tablet, phone etc
+* My understanding of machine learning projects
+* Minimal app deployment of Jupyter notebook 
 ### Technologies used
 * HTML
 * CSS
 * JS
 * Python
-* Git
 * Github
 * Visual Studio Code
 * PyCharm Community Edition
